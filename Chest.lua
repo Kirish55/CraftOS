@@ -1,5 +1,5 @@
 local chest = peripheral.wrap('minecraft:chest_0')
 
-for item in pairs(chest.list()) do
-    print(.. item.name .. " x" .. item.count)
+for slot, item in pairs(chest.list()) do
+    print(slot .. ": " .. item.name .. " x" .. item.count)
 end
